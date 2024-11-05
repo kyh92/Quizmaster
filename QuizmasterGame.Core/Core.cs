@@ -1,6 +1,6 @@
 ﻿namespace QuizmasterGame.Core;
 
-public class Class1
+public class QuizmasterGame
 {
 
 }
