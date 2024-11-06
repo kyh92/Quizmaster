@@ -65,17 +65,17 @@ internal class Program
                 timerCts.Cancel();
                 selectedOption = int.Parse(input!);
 
-                if (quizmasterGame.CorrectAnswer(question.CorrectOption, selectedOption))
+                if (quizmasterGame.CorrectAnswer(question.CorrectOption, selectedOption) && quizmasterGame.TimeLeft > 0)
                 {
                     quizmasterGame.AddPoint();
                     Console.WriteLine($"Correct answer is option {question.CorrectOption}: {question.Options[question.CorrectOption - 1]}");
-                    System.Console.WriteLine($"You currently have {quizmasterGame.points} points!");
+                    Console.WriteLine($"You currently have {quizmasterGame.points} points!");
 
                 }
                 else
                 {
                     Console.WriteLine($"Correct answer is option {question.CorrectOption}: {question.Options[question.CorrectOption - 1]}");
-                    System.Console.WriteLine($"You currently have {quizmasterGame.points} Points!");
+                    Console.WriteLine($"You currently have {quizmasterGame.points} Points!");
                 }
 
 
