@@ -10,6 +10,9 @@ internal class Program
         string relativePath = @"..\data\questions.json";
         string fullPath = Path.GetFullPath(relativePath);
 
+        Console.Clear();
+        Console.SetBufferSize(Console.BufferWidth, 200);
+
         System.Console.WriteLine($"Welcome to Quizmaster!");
 
         try
@@ -36,7 +39,7 @@ internal class Program
 
                 // Display "Select an option:" on a fixed position
                 Console.SetCursorPosition(0, countdownLine + 1);
-                System.Console.Write("Select an option: ");
+                System.Console.Write("Select an option:   ");
                 //
                 var timerCts = new CancellationTokenSource();
                 var timerTask = Task.Run(() =>
@@ -46,12 +49,12 @@ internal class Program
                             Console.SetCursorPosition(0, countdownLine);
                             Console.Write($"Time remaining: {quizmasterGame.TimeLeft} seconds           ");
                             Console.SetCursorPosition(18, countdownLine + 1);
-                            Thread.Sleep(1020); // Wait for 1 second                            
+                            Thread.Sleep(100); // Wait for 1 second                            
                         }
                         if (quizmasterGame.TimeLeft < 0)
                         {
                             Console.SetCursorPosition(0, countdownLine);
-                            Console.Write("Time's up!                                     ");
+                            Console.WriteLine("Time's up!                                     ");
                             Console.SetCursorPosition(18, countdownLine + 1);
                         }
                     }, timerCts.Token);
