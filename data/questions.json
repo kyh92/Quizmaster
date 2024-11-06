@@ -1,0 +1,42 @@
+[
+    {
+        "QuestionText": "Which is the largest animal?",
+        "Options": [
+            "Dog",
+            "Goldfish",
+            "Tiger",
+            "Elephant"
+        ],
+        "CorrectOption": 1
+    },
+    {
+        "QuestionText": "What is the sound a cow makes?",
+        "Options": [
+            "Moo",
+            "Bark",
+            "Quack",
+            "Meow"
+        ],
+        "CorrectOption": 1
+    },
+    {
+        "QuestionText": "How many seconds are there in a minute?",
+        "Options": [
+            "Just enough",
+            "Sixty",
+            "One hundred",
+            "Depends on the watch"
+        ],
+        "CorrectOption": 2
+    },
+    {
+        "QuestionText": "What is the capital of Denmark?",
+        "Options": [
+            "Oslo",
+            "Stockholm",
+            "Copenhagen",
+            "Berlin"
+        ],
+        "CorrectOption": 3
+    }
+]

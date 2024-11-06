@@ -4,11 +4,10 @@ namespace QuizmasterGame.Tests;
 
 public class QuizmasterUnitTests
 {
-   
+
     [Fact]
     public void RandomQuestions()
     {
-        //Fråga
         //Arrange
         string[] Questions = ["Det här är en fråga 1", "Det här är en fråga 2", "Det här är en fråga 3"];
         //Act
@@ -22,6 +21,19 @@ public class QuizmasterUnitTests
     {
 
     }
+
+    [Fact]
+    public void LoadFromList()
+    {
+        string filepath = "questions.json";
+
+        
+
+        
+
+    }
+
+
 
     [Fact]
     public void IncorrectAnswer()
@@ -54,23 +66,21 @@ public class QuizmasterUnitTests
     }
 
     [Fact]
-    public void TimeTimer()
-    {   //Timer existerar och har tiden 10 sekunder
-
-    //Arrange
-    int time = 10000;
-    var game = new Core.QuizmasterGame("apple");
-    //Act
-    var time2 = game.Timer(time);
-    //Assert
-       time.ShouldBeEquivalentTo(time2);
-        
+    public void TimerGoingDownByOne()
+    {
+        //Arrange
+        var game = new Core.QuizmasterGame("sample question");
+        int initialTime = game.TimeLeft;
+        //Act
+        game.OnTimedEvent(null, null);
+        //Assert
+        game.TimeLeft.ShouldBeEquivalentTo(--initialTime);
     }
 
     [Fact]
     public void TimeOut()
     {
 
-    }    
-    
+    }
+
 }
