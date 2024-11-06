@@ -22,7 +22,7 @@ public class QuizmasterGame(string word)
         var json = File.ReadAllText(filePath);
         var questions = JsonSerializer.Deserialize<List<Question>>(json);
 
-        return questions;
+        return questions!;
     }
 
     public Boolean CorrectAnswer(int correctOption, int selectedOption)

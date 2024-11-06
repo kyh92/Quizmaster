@@ -49,7 +49,7 @@ public class QuizmasterUnitTests
     [Fact]
     public void LoadFromList()
     {
-        string filepath = "questions.json";
+        // string filepath = "questions.json";
 
 
     }
@@ -85,7 +85,7 @@ public class QuizmasterUnitTests
         var game = new Core.QuizmasterGame("sample question");
         int initialTime = game.TimeLeft;
         //Act
-        game.OnTimedEvent(null, null);
+        game.OnTimedEvent(null!, null!);
         //Assert
         game.TimeLeft.ShouldBeEquivalentTo(--initialTime);
     }
