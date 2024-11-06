@@ -59,7 +59,7 @@ public class QuizmasterGame(string word)
 
     public void OnTimedEvent(Object source, ElapsedEventArgs e)
     {
-        if (TimeLeft > 0)
+        if (TimeLeft >= 0)
         {
             TimeLeft--;
         }
