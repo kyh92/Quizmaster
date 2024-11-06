@@ -19,7 +19,31 @@ public class QuizmasterUnitTests
     [Fact]
     public void CorrectAnswer()
     {
+        //Arrange
+        var game = new Core.QuizmasterGame("sample question");
+        int correctOption = 0;
+        int selectedOption = 0;
 
+        //Act
+        var test = game.CorrectAnswer(correctOption, selectedOption);
+
+        //Assert
+        test.ShouldBeTrue();
+    }
+
+    [Fact]
+    public void IncorrectAnswer()
+    {
+        //Arrange
+        var game = new Core.QuizmasterGame("sample question");
+        int correctOption = 0;
+        int selectedOption = 1;
+
+        //Act
+        var test = game.CorrectAnswer(correctOption, selectedOption);
+
+        //Assert
+        test.ShouldBeFalse();
     }
 
     [Fact]
@@ -27,20 +51,9 @@ public class QuizmasterUnitTests
     {
         string filepath = "questions.json";
 
-        
-
-        
 
     }
-
-
-
-    [Fact]
-    public void IncorrectAnswer()
-    {
-
-    }
-
+ 
     [Fact]
     public void GetPoints()
     {
