@@ -6,7 +6,6 @@ using System.Text.Json;
 public class QuizmasterGame(string word)
 {
     private Timer _timer;
-
     public int TimeLeft { get; private set; } = 10;
     public int points { get; private set; } = 0;
 
@@ -47,7 +46,7 @@ public class QuizmasterGame(string word)
     {
         TimeLeft = time;
         _timer = new Timer(1000);
-        _timer.Elapsed += OnTimedEvent;
+        _timer.Elapsed += OnTimedEvent!;
         _timer.AutoReset = true;
         _timer.Enabled = true;
     }

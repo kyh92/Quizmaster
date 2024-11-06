@@ -36,8 +36,8 @@ internal class Program
                     {
                         while (quizmasterGame.TimeLeft > 0 && !timerCts.Token.IsCancellationRequested)
                         {
-                            Console.Write($"\n Time remaining: {quizmasterGame.TimeLeft} seconds   ");
-                            Thread.Sleep(1020); // Wait for 1 second
+                            Console.Write("\rTime remaining: "+quizmasterGame.TimeLeft+ " seconds   ");
+                            Thread.Sleep(1020); // Wait for 1.02 second
                         }
                         if (quizmasterGame.TimeLeft <= 0)
                         {
@@ -47,7 +47,7 @@ internal class Program
                 
 
                 //Add functionality for checking answer
-                System.Console.Write("Select an option: ");
+                System.Console.WriteLine("Select an option: ");
                 int selectedOption = 0;
                 var input = Console.ReadLine();
                 selectedOption = int.Parse(input!);
@@ -68,7 +68,6 @@ internal class Program
 
                 
                 quizmasterGame.StopTimer();
-
 
                 Console.WriteLine(); // Add a blank line for readability
             }
