@@ -12,12 +12,12 @@ Programmet ska vid något tillfället läsa eller skriva till en textfil
 Quizmaster
 Ett frågesportspel där spelaren får frågor om olika ämnen och måste välja rätt svar bland flera alternativ. Spelet ger poäng för varje korrekt svar och erbjuder en tidsbegränsning för varje fråga för att göra det mer utmanande.
 
-MVP : 
-Frågor
-Svar
-Läsa från en fil
-Poäng
-Nice to have : 
-Tidsbegränsning
-Kan välja ämnen
-Förbättra visuella aspekter
+MVP : <br />
+Frågor <br />
+Svar <br />
+Läsa från en fil <br />
+Poäng <br />
+Nice to have : <br />
+Tidsbegränsning <br />
+Kan välja ämnen <br />
+Förbättra visuella aspekter <br />
