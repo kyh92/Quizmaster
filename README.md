@@ -22,3 +22,4 @@ Nice to have : <br />
 Tidsbegränsning <br />
 Kan välja ämnen <br />
 Förbättra visuella aspekter <br />
+Slumpa frågor <br />
