@@ -94,7 +94,7 @@ internal class Program
                 {
                    
                     Console.ForegroundColor = ConsoleColor.DarkRed;
-                    Console.WriteLine($"Correct answer is option {question.CorrectOption}: {question.Options[question.CorrectOption - 1]}");
+                    Console.WriteLine($"Wrong! The correct answer is option {question.CorrectOption}: {question.Options[question.CorrectOption - 1]}");
                     Console.ForegroundColor = ConsoleColor.DarkBlue;
                     Console.WriteLine($"You currently have {quizmasterGame.points} Points!");
                     Console.ForegroundColor = ConsoleColor.White;
